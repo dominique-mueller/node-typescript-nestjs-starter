@@ -14,7 +14,7 @@ This is a starter project for NodeJS backend applications, based on the **[NestJ
 **[TypeScript](https://www.typescriptlang.org/)**. The setup comes with tasks for building and testing the application, further
 aspects like linting and / or formatting are not defined but can easily be added on top.
 
-**Here is where things get interesting:** This starter project uses **[Webpack](https://webpack.js.org/)** as its build tool. This enables us to deliver the production build of the application as a single minified JavaScrip bundle. *No copying of `node_modules` is necessary!*
+**Here is where things get interesting:** This starter project uses **[ncc](https://github.com/zeit/ncc)** as its build tool. This enables us to deliver the production build of the application as a single minified JavaScrip bundle. *No copying of `node_modules` is necessary, no `npm install` on serves required!*
 
 > Also see the official **[Nest Framework TypeScript Starter](https://github.com/nestjs/typescript-starter)**.
 
@@ -35,7 +35,7 @@ The following commands are available:
 
 #### Build & Test Output
 
-The `build` command will output the production bundle at `build/app.js`.
+The `build` command will output the result into the `build` folder, the application itself will be put at `build/index.js`.
 
 #### Test Coverage
 
