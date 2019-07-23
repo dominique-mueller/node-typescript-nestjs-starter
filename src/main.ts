@@ -14,12 +14,6 @@ async function bootstrap(): Promise<void> {
   // Start application
   await app.listen( 3000 );
 
-  // Enable hot module reloading (HMR) - only relevant in development mode
-  if ( module.hot ) {
-    module.hot.accept();
-    module.hot.dispose( () => app.close() );
-  }
-
 }
 
 // Run!!

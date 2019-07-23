@@ -2,7 +2,6 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "incremental": true,
     "module": "commonjs",
     "moduleResolution": "node",
     "removeComments": true,
@@ -10,7 +9,6 @@
   },
   "exclude": [
     "build",
-    "node_modules",
-    "webpack.config.ts"
+    "node_modules"
   ]
 }
