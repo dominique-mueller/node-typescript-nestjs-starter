@@ -7,12 +7,16 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
+    - name: Checkout repository
+      uses: actions/checkout@v1
+    - name: Setup NodeJS
+      uses: actions/setup-node@v1
       with:
         node-version: 12.8.x
-    - run: npm ci
-    - run: npm run build
+    - name: Install dependencies
+      run: npm ci
+    - name: Build
+      run: npm run build
       env:
         CI: true
 
@@ -21,12 +25,16 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
+    - name: Checkout repository
+      uses: actions/checkout@v1
+    - name: Setup NodeJS
+      uses: actions/setup-node@v1
       with:
         node-version: 12.8.x
-    - run: npm ci
-    - run: npm run test
+    - name: Install dependencies
+      run: npm ci
+    - name: Test
+      run: npm run test
       env:
         CI: true
 
@@ -35,11 +43,15 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
+    - name: Checkout repository
+      uses: actions/checkout@v1
+    - name: Setup NodeJS
+      uses: actions/setup-node@v1
       with:
         node-version: 12.8.x
-    - run: npm ci
-    - run: npm run test:e2e
+    - name: Install dependencies
+      run: npm ci
+    - name: Test (e2e)
+      run: npm run test:e2e
       env:
         CI: true
