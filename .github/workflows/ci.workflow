@@ -30,7 +30,7 @@ jobs:
       env:
         CI: true
 
-  test-e2e:
+  e2e:
     name: Test (e2e)
     needs: build
     runs-on: ubuntu-latest
