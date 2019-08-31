@@ -8,9 +8,7 @@
     "start": "rimraf build && concurrently --names \"BUILD,APP\" \"ncc build src/main.ts --out ./build --watch --quiet\" \"wait-on build/index.js && supervisor --watch build/index.js --quiet build/index.js\"",
     "start:prod": "node build/index.js",
     "test": "jest --config jest.config.json",
-    "test:watch": "jest --config jest.config.json --watch",
-    "test:e2e": "jest --config jest.e2e.config.json",
-    "test:e2e:watch": "jest --config jest.e2e.config.json --watch"
+    "test:watch": "jest --config jest.config.json --watch"
   },
   "dependencies": {
     "@nestjs/common": "6.5.x",
