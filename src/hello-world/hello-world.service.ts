@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 
 /**
- * App Service
+ * Hello World Service
  */
 @Injectable()
-export class AppService {
+export class HelloWorldService {
 
   /**
    * Get "Hello World"

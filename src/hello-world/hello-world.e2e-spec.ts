@@ -2,12 +2,12 @@ import { INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 
-import { AppModule } from './../src/app.module';
+import { HelloWorldModule } from './hello-world.module';
 
 /**
- * App Controller - End to end test
+ * Hello World Feature - End to end test
  */
-describe( 'App Controller (e2e)', () => {
+describe( 'Hello World Feature (e2e)', () => {
 
   let app: INestApplication;
 
@@ -16,21 +16,24 @@ describe( 'App Controller (e2e)', () => {
     const moduleFixture: TestingModule = await Test
       .createTestingModule( {
         imports: [
-          AppModule
+          HelloWorldModule
         ],
-      } ).compile();
+      } )
+      .compile();
 
     app = moduleFixture.createNestApplication();
     await app.init();
 
   } );
 
-  it( '/ (GET)', () => {
+  it( 'GET /api/hello-world', () => {
 
     return request( app.getHttpServer() )
-      .get( '/' )
+      .get( '/api/hello-world' )
       .expect( 200 )
-      .expect( 'Hello World!' );
+      .expect( {
+        message: 'Hello World!'
+      } );
 
   } );
 

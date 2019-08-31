@@ -7,7 +7,7 @@
     "ts"
   ],
   "rootDir": "src",
-  "testRegex": ".spec.ts$",
+  "testRegex": "\\.(e2e-)?spec\\.ts$",
   "testEnvironment": "node",
   "transform": {
     "^.+\\.(t|j)s$": "ts-jest"
