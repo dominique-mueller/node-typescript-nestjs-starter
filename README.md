@@ -16,7 +16,7 @@ aspects like linting and / or formatting are not defined but can easily be added
 
 **Here is where things get interesting:** This starter project uses **[ncc](https://github.com/zeit/ncc)** as its build tool. This enables
 us to deliver the production build of the application as a single minified JavaScrip bundle. _No copying of `node_modules` is necessary, no
-`npm install` on serves required!_
+`npm install` on servers required!_
 
 > Also see the official **[Nest Framework TypeScript Starter](https://github.com/nestjs/typescript-starter)**.
 
