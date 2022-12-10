@@ -13,7 +13,7 @@
   "dependencies": {
     "@nestjs/common": "7.5.x",
     "@nestjs/core": "7.5.x",
-    "@nestjs/platform-express": "7.5.x",
+    "@nestjs/platform-express": "9.2.x",
     "reflect-metadata": "0.1.x",
     "rxjs": "6.6.x"
   },
